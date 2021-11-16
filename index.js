@@ -45,7 +45,7 @@ async function run(){
 
         app.get('/appointments', verifyToken, async(req, res) => {
           const email = req.query.email;
-          const date = req.query.date;
+          const date =  req.query.date;
           console.log(date);
           const query = {email: email, date: date};
           console.log(query);
@@ -89,7 +89,7 @@ async function run(){
 
          app.put('/users/admin', verifyToken, async(req, res) => {
            const user = req.body;
-           console.log('put', req.decodedEmail)
+          //  console.log('put', req.decodedEmail)
 
            const requester = req.decodedEmail;
            if(requester){
